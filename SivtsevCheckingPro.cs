@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -74,7 +74,26 @@ namespace GoodVision
 
 			}
 
-			else
+
+                /*rightAnswer = 0;
+                left = NewLetter.ObjectRow;
+            if (left <= 9)
+            {
+                NewLetter.ObjectRow = (left + right) / 2;
+                tests = 0;
+                NewLetter.Set_Letter();
+                NewLetter.CalcSize();
+                LetterPictureBox.Size = new System.Drawing.Size((int)NewLetter.Get_size().Item1, (int)NewLetter.Get_size().Item2);
+                this.LetterPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                this.LetterPictureBox.BorderStyle = BorderStyle.None;
+                Point point = new Point((402 - LetterPictureBox.Width / 2),260 - (LetterPictureBox.Height) / 2);
+                LetterPictureBox.Location = point;
+                LetterPictureBox.Image = NewLetter.ShowImage;
+            }*/
+
+            }
+
+            else
 			{
 
 				right = NewLetter.ObjectRow;
@@ -132,6 +151,8 @@ namespace GoodVision
         private void StartButton_Click(object sender, EventArgs e)
         {
             SivtsevTimer.Value = 0;
+            left = 0;
+            right = 12;
             EyeTestPanel.Visible = false;// предупреждение про проверку правого глаза уходит
 
             NewLetter.Set_Letter();
